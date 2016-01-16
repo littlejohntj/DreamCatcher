@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--¥-->
+        <!--Dream Discription View Controller-->
         <scene sceneID="Fc7-Ba-fip">
             <objects>
                 <viewController storyboardIdentifier="DreamDiscriptionViewController" id="zd5-MG-cUn" customClass="DreamDiscriptionViewController" customModule="DreamCatcher" customModuleProvider="target" sceneMemberID="viewController">
@@ -62,7 +62,7 @@
                             <constraint firstItem="hKS-xW-KFo" firstAttribute="centerX" secondItem="OhT-f3-SFI" secondAttribute="centerX" id="mHz-Ij-aqA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="¥" id="5xu-7k-QJw"/>
+                    <navigationItem key="navigationItem" id="5xu-7k-QJw"/>
                     <connections>
                         <outlet property="dreamDescriptionTextView" destination="Hun-R9-jSz" id="KKd-hs-fhr"/>
                         <outlet property="dreamLabel" destination="hKS-xW-KFo" id="Kva-Z6-aR6"/>
@@ -149,7 +149,7 @@
             </objects>
             <point key="canvasLocation" x="966" y="97"/>
         </scene>
-        <!--Title-->
+        <!--Dream Player View Controller-->
         <scene sceneID="8EG-Ta-qYK">
             <objects>
                 <viewController id="t2E-C4-QgH" customClass="DreamPlayerViewController" customModule="DreamCatcher" customModuleProvider="target" sceneMemberID="viewController">
@@ -194,7 +194,7 @@
                             <constraint firstItem="IXD-4S-dLg" firstAttribute="top" secondItem="Apv-9Q-jGJ" secondAttribute="bottom" constant="20" id="hUg-qU-Q2f"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="PFT-qS-5pJ">
+                    <navigationItem key="navigationItem" id="PFT-qS-5pJ">
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="d46-Ll-zeV">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>

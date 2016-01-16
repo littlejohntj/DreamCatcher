@@ -24,8 +24,8 @@ class DreamCollectionViewController: UIViewController, UICollectionViewDataSourc
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let welcomeViewController:WelcomeViewController = WelcomeViewController()
-        self.presentViewController(welcomeViewController, animated: false, completion: nil)
+//        let welcomeViewController:WelcomeViewController = WelcomeViewController()
+//        self.presentViewController(welcomeViewController, animated: false, completion: nil)
         
         // Setting Navigation Bar Color
         self.navigationController?.navigationBar.tintColor = .whiteColor()
@@ -42,19 +42,12 @@ class DreamCollectionViewController: UIViewController, UICollectionViewDataSourc
         arrayOfVideos = globalDCVideoManager.getArrayOfVideos()
         
         
-        checkForContent()
+        
         
     }
     
     func checkForContent() {
-        if arrayOfVideos.count == 0 {
-            self.collectionView.alpha = 0.0
-            self.collectionViewContainerView.glyptodon.show("Tell me your dreams.")
-        } else {
-            self.collectionView.alpha = 1.0
-            self.collectionViewContainerView.glyptodon.hide()
-            
-        }
+
     }
     
     func sectionSpacingForCollectionView(collectionView: UICollectionView!) -> CGFloat {
@@ -110,7 +103,8 @@ class DreamCollectionViewController: UIViewController, UICollectionViewDataSourc
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! ImageCollectionViewCell
         let video = arrayOfVideos[indexPath.row]
-        cell.imageView.kf_setImageWithURL(NSURL(string: video.getVideoThumbNailUrlAsString())!, placeholderImage: nil)
+        
+        cell.imageView.kf_setImageWithURL(NSURL(string: video.getVideoThumbNailUrlAsString())!, placeholderImage: UIImage(named: "image2"))
         print(video.getVideoThumbNailUrlAsString())
         return cell
     }
