@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CCBC0DD3EE15E0FDAD50BFCE"
+               BlueprintIdentifier = "81F5014695715AF3F16751A3"
                BuildableName = "Pods_DreamCatcher.framework"
                BlueprintName = "Pods-DreamCatcher"
                ReferencedContainer = "container:Pods.xcodeproj">

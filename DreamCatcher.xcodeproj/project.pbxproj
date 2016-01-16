@@ -24,6 +24,8 @@
 		61F207F31C4A639300B7CD27 /* DCVideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F207F21C4A639300B7CD27 /* DCVideoManager.swift */; };
 		61F207FA1C4AB60B00B7CD27 /* RACollectionViewReorderableTripletLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F207F71C4AB60B00B7CD27 /* RACollectionViewReorderableTripletLayout.m */; };
 		61F207FB1C4AB60B00B7CD27 /* RACollectionViewTripletLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F207F91C4AB60B00B7CD27 /* RACollectionViewTripletLayout.m */; };
+		61F207FD1C4AD41500B7CD27 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F207FC1C4AD41500B7CD27 /* WelcomeViewController.swift */; };
+		61F207FF1C4AD79500B7CD27 /* HFColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F207FE1C4AD79500B7CD27 /* HFColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		61F207F71C4AB60B00B7CD27 /* RACollectionViewReorderableTripletLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACollectionViewReorderableTripletLayout.m; sourceTree = "<group>"; };
 		61F207F81C4AB60B00B7CD27 /* RACollectionViewTripletLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACollectionViewTripletLayout.h; sourceTree = "<group>"; };
 		61F207F91C4AB60B00B7CD27 /* RACollectionViewTripletLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACollectionViewTripletLayout.m; sourceTree = "<group>"; };
+		61F207FC1C4AD41500B7CD27 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		61F207FE1C4AD79500B7CD27 /* HFColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HFColors.swift; sourceTree = "<group>"; };
 		C74181CBBF9CDA3D2543AE31 /* Pods-DreamCatcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamCatcher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DreamCatcher/Pods-DreamCatcher.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,6 +181,7 @@
 		61F207ED1C4A262D00B7CD27 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				61F207FE1C4AD79500B7CD27 /* HFColors.swift */,
 				61F207EB1C4A262500B7CD27 /* Player.swift */,
 				61F207E71C4A1DAE00B7CD27 /* DCVideo.swift */,
 				61F207F21C4A639300B7CD27 /* DCVideoManager.swift */,
@@ -198,6 +203,7 @@
 				61F207DF1C4A0F6A00B7CD27 /* DreamDiscriptionViewController.swift */,
 				61F207E11C4A0FC700B7CD27 /* DreamCollectionViewController.swift */,
 				61F207E91C4A211000B7CD27 /* DreamPlayerViewController.swift */,
+				61F207FC1C4AD41500B7CD27 /* WelcomeViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -406,6 +412,7 @@
 			files = (
 				61C6B8161C4A0A1B00D851A4 /* AppDelegate.swift in Sources */,
 				61F207E61C4A174000B7CD27 /* ImageCollectionViewCell.swift in Sources */,
+				61F207FF1C4AD79500B7CD27 /* HFColors.swift in Sources */,
 				61F207FA1C4AB60B00B7CD27 /* RACollectionViewReorderableTripletLayout.m in Sources */,
 				61F207E81C4A1DAE00B7CD27 /* DCVideo.swift in Sources */,
 				61F207F31C4A639300B7CD27 /* DCVideoManager.swift in Sources */,
@@ -413,6 +420,7 @@
 				61F207E01C4A0F6A00B7CD27 /* DreamDiscriptionViewController.swift in Sources */,
 				61F207EC1C4A262500B7CD27 /* Player.swift in Sources */,
 				61F207EA1C4A211000B7CD27 /* DreamPlayerViewController.swift in Sources */,
+				61F207FD1C4AD41500B7CD27 /* WelcomeViewController.swift in Sources */,
 				61F207E41C4A173A00B7CD27 /* CustomImageFlowLayout.swift in Sources */,
 				61F207E21C4A0FC700B7CD27 /* DreamCollectionViewController.swift in Sources */,
 			);

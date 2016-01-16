@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "35F1E1E2F968AB22C33CD5CD"
-               BuildableName = "Player.framework"
-               BlueprintName = "Player"
+               BlueprintIdentifier = "4009DAD01544229A2AA8033B"
+               BuildableName = "Glyptodon.framework"
+               BlueprintName = "Glyptodon"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import Glyptodon
 
 var globalDCVideoManager = DCVideoManager()
 
@@ -19,14 +20,18 @@ class DreamCollectionViewController: UIViewController, UICollectionViewDataSourc
     
     var collectionViewLayout: RACollectionViewReorderableTripletLayout!
     
+    @IBOutlet var collectionViewContainerView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let welcomeViewController:WelcomeViewController = WelcomeViewController()
+        self.presentViewController(welcomeViewController, animated: false, completion: nil)
+        
         // Setting Navigation Bar Color
         self.navigationController?.navigationBar.tintColor = .whiteColor()
         // Setting Navigation Bar Title
         self.navigationItem.title = "Dream Catcher"
-        
+        self.navigationController?.navigationBar.barTintColor = UIColor.colorFromHex(0x0C1232)
         // Setting Up Collection View 
         collectionViewLayout = RACollectionViewReorderableTripletLayout()
         
@@ -36,14 +41,20 @@ class DreamCollectionViewController: UIViewController, UICollectionViewDataSourc
         globalDCVideoManager.loadApplicationData()
         arrayOfVideos = globalDCVideoManager.getArrayOfVideos()
         
-        // Set up gesture 
         
-//        let lpgr = UILongPressGestureRecognizer(target: self, action: "handleLongPress:")
-//        lpgr.minimumPressDuration = 0.5
-//        lpgr.delaysTouchesBegan = true
-//        lpgr.delegate = self
-//        self.collectionView.addGestureRecognizer(lpgr)
+       checkForContent()
         
+    }
+    
+    func checkForContent() {
+        if arrayOfVideos.count == 0 {
+            self.collectionView.alpha = 0.0
+            self.collectionViewContainerView.glyptodon.show("Tell me your dreams.")
+        } else {
+            self.collectionView.alpha = 1.0
+            self.collectionViewContainerView.glyptodon.hide()
+            
+        }
     }
     
     func sectionSpacingForCollectionView(collectionView: UICollectionView!) -> CGFloat {
@@ -87,6 +98,7 @@ class DreamCollectionViewController: UIViewController, UICollectionViewDataSourc
         globalDCVideoManager.loadApplicationData()
         arrayOfVideos = globalDCVideoManager.getArrayOfVideos()
         collectionView.reloadData()
+        checkForContent()
     }
     
     // MARK: Collection View Functions

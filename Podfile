@@ -8,6 +8,7 @@ target 'DreamCatcher' do
 
 pod 'Alamofire', '~> 3.0'
 pod 'Player'
+pod 'Glyptodon', '~> 1.0'
 pod 'Kingfisher', '~> 1.9'
 end
 
