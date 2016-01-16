@@ -34,7 +34,8 @@ class DreamPlayerViewController: UIViewController, PlayerDelegate {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    @IBOutlet weak var toolBar: UIToolbar!
+    @IBOutlet weak var dreamTextView: UITextView!
+    
     
     private var player: Player!
     var heartAnimating:Bool = false
@@ -63,6 +64,13 @@ class DreamPlayerViewController: UIViewController, PlayerDelegate {
         self.activityIndicator.startAnimating()
         self.view.autoresizingMask = ([UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight])
         
+        dreamTextView.contentOffset = CGPointMake(0, -220)
+        
+//        self.dreamTextView.layer.borderColor = UIColor.whiteColor().CGColor
+//        self.dreamTextView.clipsToBounds = true
+//        self.dreamTextView.layer.borderWidth = 2.0
+//        self.dreamTextView.layer.cornerRadius = 10.0
+        
         self.player = Player()
         self.player.delegate = self
         self.player.view.frame = self.view.bounds
@@ -74,7 +82,7 @@ class DreamPlayerViewController: UIViewController, PlayerDelegate {
         self.player.setUrl(videoUrl!)
         self.player.playbackLoops = true
         self.view.bringSubviewToFront(pauseImage)
-        
+        self.view.bringSubviewToFront(dreamTextView)
         let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "handleTapGestureRecognizer:")
         tapGestureRecognizer.numberOfTapsRequired = 1
         self.player.view.addGestureRecognizer(tapGestureRecognizer)

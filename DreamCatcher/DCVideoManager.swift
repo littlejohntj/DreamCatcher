@@ -38,6 +38,11 @@ class DCVideoManager {
         saveApplicationData()
     }
     
+    func updateArrayWith(array: [DCVideo]) {
+        self.arrayOfVideos = array
+        saveApplicationData()
+    }
+    
     func saveApplicationData() {
         
         var persistantArrayOfVideos:[NSDictionary] = [NSDictionary]()
@@ -89,7 +94,7 @@ class DCVideoManager {
                 
                 let newVideoThumbnail = video["videoThumbnail"] as! String
                 
-                let tempVideo = DCVideo(videoString: newVideoUrl, thumbNail: newVideoThumbnail)
+                let tempVideo = DCVideo(videoString: newVideoUrl, thumbNail: newVideoThumbnail) 
                 
                 arrayOfVideos.append(tempVideo)
                 

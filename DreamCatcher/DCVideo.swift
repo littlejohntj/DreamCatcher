@@ -12,6 +12,7 @@ class DCVideo {
     
     var videoURL:String!
     var videoThumbNailURL:String!
+    var dreamText:String!
     
     init(videoString: String, thumbNail:String) {
         self.videoURL = videoString
@@ -35,4 +36,6 @@ class DCVideo {
         let url = NSURL(string: self.videoThumbNailURL)
         return url!
     }
+    
+    
 }

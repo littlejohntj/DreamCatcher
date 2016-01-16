@@ -13,32 +13,65 @@ class DreamDiscriptionViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var dreamDescriptionTextView: UITextView!
     
+    @IBOutlet weak var dreamLabel: UILabel!
     @IBOutlet weak var sendButton: UIButton!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        self.dreamDescriptionTextView.layer.borderColor = UIColor.whiteColor().CGColor
+        self.dreamDescriptionTextView.clipsToBounds = true
+        self.dreamDescriptionTextView.layer.borderWidth = 2.0
+        self.dreamDescriptionTextView.layer.cornerRadius = 10.0
+        
+        self.sendButton.layer.borderColor = UIColor.whiteColor().CGColor
+        self.sendButton.clipsToBounds = true
+        self.sendButton.layer.borderWidth = 2.0
+        self.sendButton.layer.cornerRadius = 5.0
+        
     }
     
     @IBAction func send(sender: AnyObject) {
         
-        if dreamDescriptionTextView.text.characters.count > 0 {
+        if dreamDescriptionTextView.text!.characters.count > 0 {
         
-        Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["dream": "\(dreamDescriptionTextView.text)"])
+        Alamofire.request(.GET, "http://2cc725cc.ngrok.io/api/dreamText", parameters: ["dream": "\(dreamDescriptionTextView.text)"])
             .responseJSON { response in
                 
-                var newVideoUrl = "http://104.236.30.131/2_to_4.mp4"
+                print(response.request!)  // original URL request
+                print(response.response!) // URL response
+                print(response.data!)     // server data
+                print(response)   // result of response serialization
                 
-                var newThumbNailUrl = "image1"
+                if let json = response.result.value {
+                    
+                    let jsonDict = json as! NSDictionary
+                    let videoString = jsonDict["video"] as! String
+                    let imageString = jsonDict["image"] as! String
+                    
+                    let newVideoUrl = videoString
+                    
+                    let newThumbNailUrl = imageString
+                    
+                    let newVideo = DCVideo(videoString: newVideoUrl, thumbNail: newThumbNailUrl)
+                    
+                    globalDCVideoManager.addVideo(newVideo)
+                    
+                    globalDCVideoManager.saveApplicationData()
+                    
+                    videoUrl = NSURL(string: newVideoUrl)!
+                    
+                    self.performSegueWithIdentifier("toPlayerFromDescription", sender: self)
+
+                    
+                } else {
+                    print("super not tight")
+                }
+
                 
-                let newVideo = DCVideo(videoString: newVideoUrl, thumbNail: newThumbNailUrl)
                 
-                globalDCVideoManager.addVideo(newVideo)
-                
-                globalDCVideoManager.saveApplicationData()
-                
-                videoUrl = NSURL(string: newVideoUrl)!
-                
-                self.performSegueWithIdentifier("toPlayerFromDescription", sender: self)
+//                print(response)
+//                
                 
             }
         }

@@ -22,6 +22,8 @@
 		61F207EA1C4A211000B7CD27 /* DreamPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F207E91C4A211000B7CD27 /* DreamPlayerViewController.swift */; };
 		61F207EC1C4A262500B7CD27 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F207EB1C4A262500B7CD27 /* Player.swift */; };
 		61F207F31C4A639300B7CD27 /* DCVideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F207F21C4A639300B7CD27 /* DCVideoManager.swift */; };
+		61F207FA1C4AB60B00B7CD27 /* RACollectionViewReorderableTripletLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F207F71C4AB60B00B7CD27 /* RACollectionViewReorderableTripletLayout.m */; };
+		61F207FB1C4AB60B00B7CD27 /* RACollectionViewTripletLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F207F91C4AB60B00B7CD27 /* RACollectionViewTripletLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,11 @@
 		61F207E91C4A211000B7CD27 /* DreamPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DreamPlayerViewController.swift; sourceTree = "<group>"; };
 		61F207EB1C4A262500B7CD27 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		61F207F21C4A639300B7CD27 /* DCVideoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCVideoManager.swift; sourceTree = "<group>"; };
+		61F207F51C4AB60B00B7CD27 /* DreamCatcher-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DreamCatcher-Bridging-Header.h"; sourceTree = "<group>"; };
+		61F207F61C4AB60B00B7CD27 /* RACollectionViewReorderableTripletLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACollectionViewReorderableTripletLayout.h; sourceTree = "<group>"; };
+		61F207F71C4AB60B00B7CD27 /* RACollectionViewReorderableTripletLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACollectionViewReorderableTripletLayout.m; sourceTree = "<group>"; };
+		61F207F81C4AB60B00B7CD27 /* RACollectionViewTripletLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACollectionViewTripletLayout.h; sourceTree = "<group>"; };
+		61F207F91C4AB60B00B7CD27 /* RACollectionViewTripletLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACollectionViewTripletLayout.m; sourceTree = "<group>"; };
 		C74181CBBF9CDA3D2543AE31 /* Pods-DreamCatcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamCatcher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DreamCatcher/Pods-DreamCatcher.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +147,7 @@
 				61F207F01C4A265800B7CD27 /* View Controllers */,
 				61F207EF1C4A264C00B7CD27 /* Cells */,
 				61F207F11C4A267700B7CD27 /* Collection Flow Layout */,
+				61F207F41C4AB5EE00B7CD27 /* New Collection View */,
 				61C6B8191C4A0A1B00D851A4 /* Main.storyboard */,
 				61C6B81C1C4A0A1B00D851A4 /* Assets.xcassets */,
 				61C6B81E1C4A0A1B00D851A4 /* LaunchScreen.storyboard */,
@@ -200,6 +208,18 @@
 				61F207E31C4A173A00B7CD27 /* CustomImageFlowLayout.swift */,
 			);
 			name = "Collection Flow Layout";
+			sourceTree = "<group>";
+		};
+		61F207F41C4AB5EE00B7CD27 /* New Collection View */ = {
+			isa = PBXGroup;
+			children = (
+				61F207F61C4AB60B00B7CD27 /* RACollectionViewReorderableTripletLayout.h */,
+				61F207F71C4AB60B00B7CD27 /* RACollectionViewReorderableTripletLayout.m */,
+				61F207F81C4AB60B00B7CD27 /* RACollectionViewTripletLayout.h */,
+				61F207F91C4AB60B00B7CD27 /* RACollectionViewTripletLayout.m */,
+				61F207F51C4AB60B00B7CD27 /* DreamCatcher-Bridging-Header.h */,
+			);
+			name = "New Collection View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,8 +406,10 @@
 			files = (
 				61C6B8161C4A0A1B00D851A4 /* AppDelegate.swift in Sources */,
 				61F207E61C4A174000B7CD27 /* ImageCollectionViewCell.swift in Sources */,
+				61F207FA1C4AB60B00B7CD27 /* RACollectionViewReorderableTripletLayout.m in Sources */,
 				61F207E81C4A1DAE00B7CD27 /* DCVideo.swift in Sources */,
 				61F207F31C4A639300B7CD27 /* DCVideoManager.swift in Sources */,
+				61F207FB1C4AB60B00B7CD27 /* RACollectionViewTripletLayout.m in Sources */,
 				61F207E01C4A0F6A00B7CD27 /* DreamDiscriptionViewController.swift in Sources */,
 				61F207EC1C4A262500B7CD27 /* Player.swift in Sources */,
 				61F207EA1C4A211000B7CD27 /* DreamPlayerViewController.swift in Sources */,
@@ -533,10 +555,13 @@
 			baseConfigurationReference = C74181CBBF9CDA3D2543AE31 /* Pods-DreamCatcher.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DreamCatcher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MonicSoftware.DreamCatcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DreamCatcher/DreamCatcher-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -545,10 +570,12 @@
 			baseConfigurationReference = 428742361B7A38B4C20010E8 /* Pods-DreamCatcher.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DreamCatcher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MonicSoftware.DreamCatcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DreamCatcher/DreamCatcher-Bridging-Header.h";
 			};
 			name = Release;
 		};
