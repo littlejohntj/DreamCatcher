@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DreamDiscriptionViewController.swift
 //  DreamCatcher
 //
 //  Created by Todd Littlejohn on 1/16/16.
@@ -8,11 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class DreamDiscriptionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+       
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +21,4 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-
