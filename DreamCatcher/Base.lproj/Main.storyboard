@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Dream Discription View Controller-->
+        <!--Title-->
         <scene sceneID="Fc7-Ba-fip">
             <objects>
                 <viewController storyboardIdentifier="DreamDiscriptionViewController" id="zd5-MG-cUn" customClass="DreamDiscriptionViewController" customModule="DreamCatcher" customModuleProvider="target" sceneMemberID="viewController">
@@ -62,6 +62,7 @@
                             <constraint firstItem="8Gi-ar-UaL" firstAttribute="centerY" secondItem="OhT-f3-SFI" secondAttribute="centerY" id="vWg-zR-oxi"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="5xu-7k-QJw"/>
                     <connections>
                         <outlet property="dreamDescriptionTextView" destination="8Gi-ar-UaL" id="4Uz-Lj-Dgc"/>
                         <outlet property="sendButton" destination="1DB-1l-xyr" id="R5w-2A-qzu"/>
@@ -132,24 +133,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="X0M-k7-hfE">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="2cs-gg-mfZ"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8eH-rv-Aa7">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="addNewDream:" destination="le4-qz-zfZ" id="5Ho-7k-KKc"/>
+                                <action selector="addNewDream:" destination="le4-qz-zfZ" id="9tx-WH-gic"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="qxR-e9-kza" id="FOc-9W-wUl"/>
-                        <segue destination="zd5-MG-cUn" kind="show" identifier="toAddNewDream" id="sTk-Yi-enb"/>
+                        <segue destination="zd5-MG-cUn" kind="show" identifier="lego" id="GO0-Im-g8o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2mP-a1-wY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="1ja-4o-OF3">
-                    <connections>
-                        <action selector="longGesture:" destination="le4-qz-zfZ" id="xs3-u5-QNT"/>
-                    </connections>
-                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="966" y="97"/>
         </scene>
@@ -224,6 +221,6 @@
         <image name="pause" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ijg-rm-q9p"/>
+        <segue reference="SZg-kf-MZj"/>
     </inferredMetricsTieBreakers>
 </document>

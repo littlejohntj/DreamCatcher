@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Kingfisher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Player.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1DD75AF5CBC17B59DBD72F34483BB734</key>
+		<key>22A8266BA89AD6FC2FBE63789D501740</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>667DD1911D25F6178B17E6CF37ECF12F</key>
+		<key>8807C33B4DFAB2C0C11749D182454465</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>898B54F33BB3876C72E084ABE60C4C26</key>
+		<key>967FB6BE1D545072B97B0B80B8B89637</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D534FE8C5296AA361AB52F4049B41E70</key>
 		<dict>
 			<key>primary</key>
 			<true/>

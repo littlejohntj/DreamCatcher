@@ -33,6 +33,11 @@ class DCVideoManager {
         return self.arrayOfVideos
     }
     
+    func removeVideoAtIndex(index: Int) {
+        arrayOfVideos.removeAtIndex(index)
+        saveApplicationData()
+    }
+    
     func saveApplicationData() {
         
         var persistantArrayOfVideos:[NSDictionary] = [NSDictionary]()
