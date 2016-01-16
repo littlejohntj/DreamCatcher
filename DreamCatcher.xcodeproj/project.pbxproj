@@ -21,6 +21,7 @@
 		61F207E81C4A1DAE00B7CD27 /* DCVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F207E71C4A1DAE00B7CD27 /* DCVideo.swift */; };
 		61F207EA1C4A211000B7CD27 /* DreamPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F207E91C4A211000B7CD27 /* DreamPlayerViewController.swift */; };
 		61F207EC1C4A262500B7CD27 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F207EB1C4A262500B7CD27 /* Player.swift */; };
+		61F207F31C4A639300B7CD27 /* DCVideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F207F21C4A639300B7CD27 /* DCVideoManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		61F207E71C4A1DAE00B7CD27 /* DCVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCVideo.swift; sourceTree = "<group>"; };
 		61F207E91C4A211000B7CD27 /* DreamPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DreamPlayerViewController.swift; sourceTree = "<group>"; };
 		61F207EB1C4A262500B7CD27 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		61F207F21C4A639300B7CD27 /* DCVideoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCVideoManager.swift; sourceTree = "<group>"; };
 		C74181CBBF9CDA3D2543AE31 /* Pods-DreamCatcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamCatcher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DreamCatcher/Pods-DreamCatcher.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +171,7 @@
 			children = (
 				61F207EB1C4A262500B7CD27 /* Player.swift */,
 				61F207E71C4A1DAE00B7CD27 /* DCVideo.swift */,
+				61F207F21C4A639300B7CD27 /* DCVideoManager.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				61C6B8161C4A0A1B00D851A4 /* AppDelegate.swift in Sources */,
 				61F207E61C4A174000B7CD27 /* ImageCollectionViewCell.swift in Sources */,
 				61F207E81C4A1DAE00B7CD27 /* DCVideo.swift in Sources */,
+				61F207F31C4A639300B7CD27 /* DCVideoManager.swift in Sources */,
 				61F207E01C4A0F6A00B7CD27 /* DreamDiscriptionViewController.swift in Sources */,
 				61F207EC1C4A262500B7CD27 /* Player.swift in Sources */,
 				61F207EA1C4A211000B7CD27 /* DreamPlayerViewController.swift in Sources */,

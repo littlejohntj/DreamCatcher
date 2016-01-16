@@ -25,13 +25,16 @@
 //  SOFTWARE.
 
 import UIKit
+import AssetsLibrary
 
-let videoUrl = NSURL(string: "https://v.cdn.vine.co/r/videos/AA3C120C521177175800441692160_38f2cbd1ffb.1.5.13763579289575020226.mp4")!
+var videoUrl = NSURL(string: "https://v.cdn.vine.co/r/videos/AA3C120C521177175800441692160_38f2cbd1ffb.1.5.13763579289575020226.mp4")
 
 class DreamPlayerViewController: UIViewController, PlayerDelegate {
     @IBOutlet weak var pauseImage: UIImageView!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    @IBOutlet weak var toolBar: UIToolbar!
     
     private var player: Player!
     var heartAnimating:Bool = false
@@ -57,6 +60,7 @@ class DreamPlayerViewController: UIViewController, PlayerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.pauseImage.alpha = 0.0
+        self.activityIndicator.startAnimating()
         self.view.autoresizingMask = ([UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight])
         
         self.player = Player()
@@ -67,9 +71,10 @@ class DreamPlayerViewController: UIViewController, PlayerDelegate {
         self.view.addSubview(self.player.view)
         self.player.didMoveToParentViewController(self)
         
-        self.player.setUrl(videoUrl)
+        self.player.setUrl(videoUrl!)
         self.player.playbackLoops = true
         self.view.bringSubviewToFront(pauseImage)
+        
         let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "handleTapGestureRecognizer:")
         tapGestureRecognizer.numberOfTapsRequired = 1
         self.player.view.addGestureRecognizer(tapGestureRecognizer)
@@ -127,6 +132,13 @@ class DreamPlayerViewController: UIViewController, PlayerDelegate {
             count = 0
         }
     }
+    
+    // MARK: Actions 
+    
+    @IBAction func shareButton(sender: AnyObject) {
+        
+    }
+    
     
     // MARK: PlayerDelegate
     
