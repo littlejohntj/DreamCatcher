@@ -29,6 +29,10 @@ import AssetsLibrary
 
 var videoUrl = NSURL(string: "https://v.cdn.vine.co/r/videos/AA3C120C521177175800441692160_38f2cbd1ffb.1.5.13763579289575020226.mp4")
 
+var currentDream:DCVideo!
+
+var currentDreamIndex:Int!
+
 class DreamPlayerViewController: UIViewController, PlayerDelegate {
     @IBOutlet weak var pauseImage: UIImageView!
     
@@ -66,10 +70,7 @@ class DreamPlayerViewController: UIViewController, PlayerDelegate {
         
         dreamTextView.contentOffset = CGPointMake(0, -220)
         
-//        self.dreamTextView.layer.borderColor = UIColor.whiteColor().CGColor
-//        self.dreamTextView.clipsToBounds = true
-//        self.dreamTextView.layer.borderWidth = 2.0
-//        self.dreamTextView.layer.cornerRadius = 10.0
+        
         
         self.player = Player()
         self.player.delegate = self
@@ -86,7 +87,7 @@ class DreamPlayerViewController: UIViewController, PlayerDelegate {
         let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "handleTapGestureRecognizer:")
         tapGestureRecognizer.numberOfTapsRequired = 1
         self.player.view.addGestureRecognizer(tapGestureRecognizer)
-        
+        self.dreamTextView.text = currentDream.getDreamText()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -128,6 +129,25 @@ class DreamPlayerViewController: UIViewController, PlayerDelegate {
             timer =  NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: Selector("counting"), userInfo: nil, repeats: true)
         }
     }
+
+    @IBAction func handleActions(sender: AnyObject) {
+        
+        let alertController = UIAlertController(title: "Do Something", message:
+            "What would you like to do?", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
+        let deleteAction = UIAlertAction(title: "Delete", style: UIAlertActionStyle.Destructive, handler: { (action) -> Void in
+            
+            globalDCVideoManager.removeVideoAtIndex(currentDreamIndex)
+            self.navigationController?.popViewControllerAnimated(true)
+            
+        })
+        alertController.addAction(cancelAction)
+        alertController.addAction(deleteAction)
+        //        alertController.view.tintColor = UIColor._hackRed()
+        self.presentViewController(alertController, animated: true, completion: nil)
+        
+    }
+    
     
     func counting() {
         count++

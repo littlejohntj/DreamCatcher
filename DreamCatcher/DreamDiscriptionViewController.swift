@@ -48,20 +48,26 @@ class DreamDiscriptionViewController: UIViewController, UITextFieldDelegate {
                     let jsonDict = json as! NSDictionary
                     let videoString = jsonDict["video"] as! String
                     let imageString = jsonDict["image"] as! String
-                    
+                    let dreamText = self.dreamDescriptionTextView.text
                     let newVideoUrl = videoString
                     
                     let newThumbNailUrl = imageString
                     
-                    let newVideo = DCVideo(videoString: newVideoUrl, thumbNail: newThumbNailUrl)
+                    let newVideo = DCVideo(videoString: newVideoUrl, thumbNail: newThumbNailUrl, text: dreamText)
+                    
+                    currentDream = newVideo
                     
                     globalDCVideoManager.addVideo(newVideo)
                     
                     globalDCVideoManager.saveApplicationData()
                     
+                    currentDreamIndex = globalDCVideoManager.getLastIndexSpot()
+                    
                     videoUrl = NSURL(string: newVideoUrl)!
                     
                     self.performSegueWithIdentifier("toPlayerFromDescription", sender: self)
+                    
+                    self.dreamDescriptionTextView.text = "  "
 
                     
                 } else {

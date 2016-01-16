@@ -43,6 +43,16 @@ class DCVideoManager {
         saveApplicationData()
     }
     
+    func getLastIndexSpot() -> Int {
+        let count = arrayOfVideos.count
+        let incrementedCount = count - 1
+        if incrementedCount < 0 {
+            return 0
+        }
+        return count - 1
+    }
+    
+    
     func saveApplicationData() {
         
         var persistantArrayOfVideos:[NSDictionary] = [NSDictionary]()
@@ -57,11 +67,15 @@ class DCVideoManager {
             
             let videoThumbNail = video.getVideoThumbNailUrlAsString()
             
+            let dreamText = video.getDreamText()
+            
             // Map the array of sessions into a dictionary
             
             persistantVideo["videoUrl"] = videoURL
             
             persistantVideo["videoThumbnail"] = videoThumbNail
+            
+            persistantVideo["dreamText"] = dreamText
             
             // Add the acitivty to the array
             persistantArrayOfVideos.append(persistantVideo)
@@ -94,7 +108,9 @@ class DCVideoManager {
                 
                 let newVideoThumbnail = video["videoThumbnail"] as! String
                 
-                let tempVideo = DCVideo(videoString: newVideoUrl, thumbNail: newVideoThumbnail) 
+                let newDreamText = video["dreamText"] as! String
+                
+                let tempVideo = DCVideo(videoString: newVideoUrl, thumbNail: newVideoThumbnail, text: newDreamText)
                 
                 arrayOfVideos.append(tempVideo)
                 

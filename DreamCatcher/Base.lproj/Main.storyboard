@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--¥-->
         <scene sceneID="Fc7-Ba-fip">
             <objects>
                 <viewController storyboardIdentifier="DreamDiscriptionViewController" id="zd5-MG-cUn" customClass="DreamDiscriptionViewController" customModule="DreamCatcher" customModuleProvider="target" sceneMemberID="viewController">
@@ -62,7 +62,7 @@
                             <constraint firstItem="hKS-xW-KFo" firstAttribute="centerX" secondItem="OhT-f3-SFI" secondAttribute="centerX" id="mHz-Ij-aqA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="5xu-7k-QJw"/>
+                    <navigationItem key="navigationItem" title="¥" id="5xu-7k-QJw"/>
                     <connections>
                         <outlet property="dreamDescriptionTextView" destination="Hun-R9-jSz" id="KKd-hs-fhr"/>
                         <outlet property="dreamLabel" destination="hKS-xW-KFo" id="Kva-Z6-aR6"/>
@@ -74,7 +74,7 @@
             </objects>
             <point key="canvasLocation" x="966" y="-643"/>
         </scene>
-        <!--Title-->
+        <!--Dream Collection View Controller-->
         <scene sceneID="zEk-2H-8as">
             <objects>
                 <viewController storyboardIdentifier="Dream Collection View" id="le4-qz-zfZ" customClass="DreamCollectionViewController" customModule="DreamCatcher" customModuleProvider="target" sceneMemberID="viewController">
@@ -130,7 +130,7 @@
                             <constraint firstItem="H0e-Ln-5d7" firstAttribute="top" secondItem="qxR-e9-kza" secondAttribute="bottom" id="atK-R2-als"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="X0M-k7-hfE">
+                    <navigationItem key="navigationItem" id="X0M-k7-hfE">
                         <barButtonItem key="backBarButtonItem" title="Back" id="2cs-gg-mfZ"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8eH-rv-Aa7">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -171,18 +171,19 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="8Td-YW-5UB">
                                 <rect key="frame" x="290" y="290" width="20" height="20"/>
                             </activityIndicatorView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipis" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Apv-9Q-jGJ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Apv-9Q-jGJ">
                                 <rect key="frame" x="10" y="404" width="580" height="176"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="176" id="Zzc-S5-fAK"/>
                                 </constraints>
+                                <string key="text">kmksam fdsafdsakf sfdmdsakfdsa fdsakmfsdakfasdfmdskamfdsa fmdsakfmsdafsdkfsad fksadfmsd fdsakmfsad fksdamf dsakfmsad fksadfsd fkdsamfdsa fksadmfasd fsdkmfskdmfas fasdkmfsd fksdmfsdmf dskf sad fkds fas</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.1019607843" green="0.73725490199999999" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="FvY-1i-iSq" firstAttribute="centerY" secondItem="rhh-JJ-zfI" secondAttribute="centerY" id="Jj3-XE-6ND"/>
                             <constraint firstItem="Apv-9Q-jGJ" firstAttribute="leading" secondItem="rhh-JJ-zfI" secondAttribute="leading" constant="10" id="Nxe-Vz-elI"/>
@@ -197,7 +198,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="d46-Ll-zeV">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="shareButton:" destination="t2E-C4-QgH" id="kKO-EP-2Ga"/>
+                                <action selector="handleActions:" destination="t2E-C4-QgH" id="fN7-PK-4Pl"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -252,6 +253,6 @@
         <image name="pause" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ijg-rm-q9p"/>
+        <segue reference="SZg-kf-MZj"/>
     </inferredMetricsTieBreakers>
 </document>

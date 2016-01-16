@@ -30,7 +30,7 @@ class DreamCollectionViewController: UIViewController, UICollectionViewDataSourc
         // Setting Navigation Bar Color
         self.navigationController?.navigationBar.tintColor = .whiteColor()
         // Setting Navigation Bar Title
-        self.navigationItem.title = "Dream Catcher"
+        self.navigationItem.title = "Dreamcatcher"
         self.navigationController?.navigationBar.barTintColor = UIColor.colorFromHex(0x0C1232)
         // Setting Up Collection View 
         collectionViewLayout = RACollectionViewReorderableTripletLayout()
@@ -42,7 +42,7 @@ class DreamCollectionViewController: UIViewController, UICollectionViewDataSourc
         arrayOfVideos = globalDCVideoManager.getArrayOfVideos()
         
         
-       checkForContent()
+        checkForContent()
         
     }
     
@@ -120,6 +120,8 @@ class DreamCollectionViewController: UIViewController, UICollectionViewDataSourc
         if segue.identifier == "toVideoPlayer" {
             let cellIndexPathRow = collectionView.indexPathForCell(sender! as! ImageCollectionViewCell)!
             let videoToPlay:DCVideo = arrayOfVideos[cellIndexPathRow.row]
+            currentDream = videoToPlay
+            currentDreamIndex = cellIndexPathRow.row
             videoUrl = videoToPlay.getVideoUrlAsUrl()
         }
     }
@@ -134,25 +136,12 @@ class DreamCollectionViewController: UIViewController, UICollectionViewDataSourc
 //                        let index = collectionView.indexPathForItemAtPoint(location)
 //                        print(self.collectionView.frame.width)
 //                        print(index)
-//                        let alertController = UIAlertController(title: "Delete Dream", message:
-//                            "Are you sure you want to forget this dream?", preferredStyle: UIAlertControllerStyle.Alert)
-//                        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
-//                        let deleteAction = UIAlertAction(title: "Delete", style: UIAlertActionStyle.Destructive, handler: { (action) -> Void in
-//                            
-//                            globalDCVideoManager.removeVideoAtIndex((index?.row)!)
-//                            self.arrayOfVideos = globalDCVideoManager.getArrayOfVideos()
-//                            self.collectionView.reloadData()
-//                            
-//                        })
-//                        alertController.addAction(cancelAction)
-//                        alertController.addAction(deleteAction)
-//                        //        alertController.view.tintColor = UIColor._hackRed()
-//                        self.presentViewController(alertController, animated: true, completion: nil)
+////            
 //        }
 //        
 //    }
-
-    
+//
+//    
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent;
