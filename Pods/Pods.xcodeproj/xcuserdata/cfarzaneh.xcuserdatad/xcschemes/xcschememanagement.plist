@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Glyptodon.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Kingfisher.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Player.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Pods-DreamCatcher.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>08EC9E4E1BC1FAA6656E8FC49AEDD936</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4FA46CE51494116727232313726E24F1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CD417C646989071293B8F5BE2F31ED6F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D8EC5C23F4305F61F6571126173F1579</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F5239824794F730E1E98698C84FC4C4C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

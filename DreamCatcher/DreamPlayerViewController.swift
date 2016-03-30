@@ -132,8 +132,8 @@ class DreamPlayerViewController: UIViewController, PlayerDelegate {
 
     @IBAction func handleActions(sender: AnyObject) {
         
-        let alertController = UIAlertController(title: "Do Something", message:
-            "What would you like to do?", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        let alertController = UIAlertController(title: "Delete", message:
+            "Are you sure you want to delete?", preferredStyle: UIAlertControllerStyle.ActionSheet)
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
         let deleteAction = UIAlertAction(title: "Delete", style: UIAlertActionStyle.Destructive, handler: { (action) -> Void in
             
